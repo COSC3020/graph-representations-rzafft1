@@ -20,7 +20,7 @@ most important part. Add your answer to this markdown file.
 - this conversion is dependent on the number of verticies and the number of edges. The number of vertices in the graph will reflect the size of our adjacency list, since each nested list in the adjacency list corresponds to an node in the graph along with its neighbors that it is pointing to. Therefore this conversion is dependent on the number of vertices and the number of edges since each entrie represents a node and the size of the entry of that node is dependent on the number of edges that node has to other nodes in the graph. 
 - the outer loop goes through each of the entry / node in the adjacency list to get a time complexity $O(V)$
 - the inner nested loop goes through each edge (nested list) of the given node, and pushes a 1 to the corresponding positions in the converted matrix. All other entries will be 0. Since we evaluate an edge for every nested list, the time complexity for the inner loop is dependent on the number edges for the current node. Therefore its complexity is $O(E)$
-- the total time complexity would then be $O(V * E)$ 
+- the total time complexity would then be $O(V + E)$
 
 2. Adjacency matrix to list 
 - this conversion is dependent on the number of vertices and necessarily the number of edges. The number of 1's in the matrix is equal to the number of edges in the graph, however we need to check for an edge at every possible connection, therefore the conversions time complexity will not be dependent on the number of edges, since checking if the connection is a 1 or 0 is a constant time operation. 
